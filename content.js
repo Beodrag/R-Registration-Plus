@@ -239,11 +239,11 @@ function load(l){
                     }
                     //Creates link to professor search on RMP website.
                     if(constant == 0){
-                        let linkHead = "https://www.ratemyprofessors.com/search/teachers?query=";
-                        linkHead = linkHead.concat(finalString);
-                        const linkTail = "&sid=U2Nob29sLTEwNzY=";
+                        let linkHead = "https://www.ratemyprofessors.com/search/professors/1076?q=";
+                        linkHead = linkHead.concat(finalString.substring(0, finalString.indexOf(" ")));
+                        const linkTail = "%20";
                         linkHead = linkHead.concat(linkTail);
-                        
+                        linkHead = linkHead.concat(finalString.substring(finalString.indexOf(" ") + 1, finalString.length));
                         const link = document.createElement("a");
                         link.textContent = finalString;
                         link.href = linkHead;
