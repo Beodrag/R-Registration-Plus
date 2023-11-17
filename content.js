@@ -287,7 +287,7 @@ function load(l){
                 const cell = table.rows[i].cells[8];
 
                 cell.style.textAlign = "center";
-                if(cell.textContent = "In-Person"){
+                if(cell.textContent == "In-Person"){
                     cell.textContent = "IP";
                 }
             }
